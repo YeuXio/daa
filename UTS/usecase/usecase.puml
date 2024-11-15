@@ -1,0 +1,21 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+actor Admin as admin
+
+package "Aplikasi Guru" {
+  usecase "Tambah Guru" as UC_Tambah
+  usecase "Perbarui Guru" as UC_Perbarui
+  usecase "Hapus Guru" as UC_Hapus
+  usecase "Tetapkan Peran" as UC_Role
+  usecase "Kelola Data Guru" as UC_Kelola
+}
+
+admin --> UC_Tambah
+admin --> UC_Perbarui
+admin --> UC_Hapus
+admin --> UC_Role
+admin --> UC_Kelola
+
+@enduml

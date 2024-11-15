@@ -1,0 +1,31 @@
+@startuml
+start
+
+:Mulai;
+
+if (Aksi yang dilakukan?) then (Tambah Guru)
+    :Isi Data Guru;
+    :Simpan ke Database;
+    :Guru Ditambahkan;
+else if (Perbarui Guru?) then (Ya)
+    :Pilih Data Guru;
+    :Perbarui Informasi;
+    :Simpan Perubahan ke Database;
+    :Guru Diperbarui;
+else if (Hapus Guru?) then (Ya)
+    :Pilih Data Guru;
+    :Hapus dari Database;
+    :Guru Dihapus;
+else if (Tetapkan Peran?) then (Ya)
+    :Pilih Pengguna;
+    :Tetapkan Peran (Mis. Super Admin);
+    :Simpan ke Database Peran;
+    :Peran Ditugaskan;
+else
+    :Tidak ada aksi;
+endif
+
+:Proses Berhasil;
+
+stop
+@enduml
